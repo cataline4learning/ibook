@@ -16,7 +16,6 @@
     "@nuxtjs/axios": "^5.12.5",
     "cookie-universal-nuxt": "^2.1.4",
     "core-js": "^3.8.3",
-    "json-server": "^0.16.3",
     "normalize.css": "^8.0.1",
     "nuxt": "^2.14.12",
     "swiper": "^6.4.15",

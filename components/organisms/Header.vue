@@ -45,14 +45,11 @@ header {
       &.nuxt-link-exact-active:after {
         content: '';
         position: absolute;
-        width: -webkit-max-content;
-        width: -moz-max-content;
         width: 100%;
         height: 4px;
         background: white;
         left: 0;
-        bottom: -15px;
-        animation: fade 300ms ease;
+        bottom: -16px;
       }
     }
   }
