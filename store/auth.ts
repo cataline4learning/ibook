@@ -1,0 +1,43 @@
+import { Module, VuexModule, Mutation, Action } from 'vuex-module-decorators'
+import { $axios, $cookies } from '@/utils/nuxt-instance'
+
+interface Store {
+  email: string
+  password: string
+}
+
+@Module({ name: 'auth', stateFactory: true, namespaced: true })
+export default class Auth extends VuexModule {
+  private token = ''
+
+  @Mutation
+  private UPDATE_TOKEN(token: string) {
+    this.token = token
+  }
+
+  @Action
+  async create({ email, password }: Store) {
+    const { accessToken } = await $axios.$post('/login', { email, password })
+
+    $cookies.set('token', accessToken, {
+      path: '/',
+      maxAge: 60 * 60 * 24 * 30 // 30 days
+    })
+
+    this.context.commit('UPDATE_TOKEN', accessToken)
+  }
+
+  @Action
+  public update() {
+    const token = $cookies.get('token') || null
+
+    this.context.commit('UPDATE_TOKEN', token)
+  }
+
+  @Action
+  destroy() {
+    $cookies.remove('token')
+
+    this.context.commit('UPDATE_TOKEN', null)
+  }
+}
