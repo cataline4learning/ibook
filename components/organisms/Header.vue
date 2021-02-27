@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="header">
     <nav>
       <ul class="items">
         <li>
@@ -19,8 +19,7 @@
 </template>
 
 <style lang="scss" scoped>
-header {
-  width: 100%;
+.header {
   display: grid;
   justify-content: center;
   nav {

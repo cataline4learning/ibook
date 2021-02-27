@@ -2,10 +2,22 @@
   <footer>
     <Container class="footer-content">
       <Logo />
-      <p>Copyright © 2021 IBOOK</p>
+      <p>Copyright © {{ currentYear }} IBOOK</p>
     </Container>
   </footer>
 </template>
+
+<script lang="ts">
+import Vue from 'vue'
+
+export default Vue.extend({
+  computed: {
+    currentYear(): number {
+      return new Date().getFullYear()
+    }
+  }
+})
+</script>
 
 <style lang="scss" scoped>
 footer {

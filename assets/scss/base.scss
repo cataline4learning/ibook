@@ -56,21 +56,3 @@ body {
     outline: none;
   }
 }
-
-.center {
-  text-align: center;
-}
-
-.web-only {
-  display: none !important;
-  @include screen('large', 'infinity') {
-    display: block !important;
-  }
-}
-
-.mobile-only {
-  display: none !important;
-  @include screen('small', 'medium') {
-    display: block !important;
-  }
-}

@@ -6,12 +6,14 @@ interface Store {
   password: string
 }
 
+type Token = string | null
+
 @Module({ name: 'auth', stateFactory: true, namespaced: true })
 export default class Auth extends VuexModule {
-  private token = ''
+  private token = '' as Token
 
   @Mutation
-  private UPDATE_TOKEN(token: string) {
+  private UPDATE_TOKEN(token: Token) {
     this.token = token
   }
 
@@ -30,14 +32,12 @@ export default class Auth extends VuexModule {
   @Action
   public update() {
     const token = $cookies.get('token') || null
-
     this.context.commit('UPDATE_TOKEN', token)
   }
 
   @Action
   destroy() {
     $cookies.remove('token')
-
     this.context.commit('UPDATE_TOKEN', null)
   }
 }
