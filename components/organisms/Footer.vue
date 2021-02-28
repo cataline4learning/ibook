@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer class="footer">
     <Container class="footer-content">
       <Logo />
       <p>Copyright © {{ currentYear }} IBOOK</p>
@@ -20,14 +20,14 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-footer {
+.footer {
   width: 100%;
   height: 110px;
   background: color(dark, darkest);
   position: absolute;
   bottom: 0;
   left: 0;
-  .footer-content {
+  .container {
     display: grid;
     height: 100%;
     grid-auto-flow: column;

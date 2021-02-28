@@ -1,8 +1,8 @@
 <template>
-  <Container class="home-template">
+  <div class="home-template">
     <PageTitle text="Bem-vindo ao" strong="IBook" />
     <Releases />
-  </Container>
+  </div>
 </template>
 
 <style scoped>

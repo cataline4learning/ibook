@@ -8,8 +8,12 @@ import { books } from '@/store'
 
 export default Vue.extend({
   layout: 'ibook',
-  async asyncData({ route }) {
-    await books.show({ id: route.params.id as any })
+  async asyncData({ route, error }) {
+    try {
+      await books.show({ id: route.params.id as any })
+    } catch {
+      return error({ statusCode: 404 })
+    }
   },
   head() {
     return {

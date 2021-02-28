@@ -1,7 +1,9 @@
 <template>
   <div class="ibook-layout">
     <Header />
-    <Nuxt class="content" />
+    <Container>
+      <Nuxt />
+    </Container>
     <Footer />
   </div>
 </template>
@@ -11,7 +13,7 @@
   margin-top: 4.313rem;
   display: grid;
   grid-gap: 6.75rem;
-  .content {
+  .container {
     padding-bottom: 6.75rem;
   }
 }

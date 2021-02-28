@@ -1,5 +1,5 @@
 <template>
-  <h1>
+  <h1 class="page-title">
     {{ text }} <b>{{ strong }}</b>
   </h1>
 </template>
@@ -20,7 +20,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-h1 {
+.page-title {
   text-align: center;
   font-size: 2.5rem;
   font-weight: 500;
@@ -28,8 +28,8 @@ h1 {
     grid-template-columns: 1fr;
     font-size: 1.8rem;
   }
-  span {
-    color: color(dark, darkest);
+  b {
+    color: color('dark', 'darkest');
   }
 }
 </style>

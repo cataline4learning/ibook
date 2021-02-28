@@ -20,10 +20,7 @@ export default {
   components: [{ path: '@/components', pathPrefix: false }],
   buildModules: ['@nuxt/typescript-build', '@nuxtjs/style-resources'],
   styleResources: {
-    scss: [
-      '@/components/bosons/Breakpoints.scss',
-      '@/components/bosons/ColorPalette.scss'
-    ]
+    scss: ['@/components/bosons/*.scss']
   },
   modules: ['@nuxtjs/axios', 'cookie-universal-nuxt'],
   axios: {

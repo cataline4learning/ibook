@@ -1,5 +1,5 @@
 <template>
-  <Container class="book-reader-template">
+  <div class="book-reader-template">
     <BookReader />
-  </Container>
+  </div>
 </template>

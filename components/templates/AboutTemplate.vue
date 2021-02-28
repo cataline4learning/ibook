@@ -1,8 +1,8 @@
 <template>
-  <Container class="about-template">
+  <div class="about-template">
     <PageTitle text="O que é o" strong="iBook?" />
     <Presentation />
-  </Container>
+  </div>
 </template>
 
 <style scoped>

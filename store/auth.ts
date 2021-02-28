@@ -36,7 +36,7 @@ export default class Auth extends VuexModule {
   }
 
   @Action
-  destroy() {
+  public destroy() {
     $cookies.remove('token')
     this.context.commit('UPDATE_TOKEN', null)
   }
