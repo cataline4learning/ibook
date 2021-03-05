@@ -26,5 +26,7 @@ export default {
   axios: {
     baseURL: 'https://ibook-api.herokuapp.com'
   },
-  build: {}
+  build: {
+    extractCSS: true
+  }
 }

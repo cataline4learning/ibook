@@ -16,5 +16,10 @@
   .container {
     padding-bottom: 6.75rem;
   }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
 }
 </style>

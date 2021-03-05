@@ -8,6 +8,6 @@
 <style scoped>
 .home-template {
   display: grid;
-  grid-gap: 2rem;
+  grid-gap: 4rem;
 }
 </style>
